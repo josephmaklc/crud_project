@@ -21,9 +21,6 @@ from persons import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("page1",views.my_view1),
-    #path('', views.recipes),
-    #path('update_recipe/<id>', views.update_recipe, name='update_recipe'),
-   #path('delete_recipe/<id>', views.delete_recipe, name='delete_recipe'),
    path('',views.persons),
    path('update_person/<id>', views.update_person, name='update_person'),
    path('delete_person/<id>', views.delete_person),

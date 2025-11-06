@@ -19,7 +19,7 @@ Install Django
 
 `python -m pip install Django`
 
-Clone this project
+Clone this project, so it lives under your myworld folder
 
 Change directory
 

@@ -2,15 +2,12 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 
 from .models import Person
-import logging
-logger = logging.getLogger(__name__)
 
 # Create your views here.
 def my_view1(request):
     return HttpResponse("Hello world!")
 
 def persons(request):
-    logger.info("porra: "+request.method)
     if request.method == 'POST':
         data = request.POST
         last_name = data.get('last_name')
