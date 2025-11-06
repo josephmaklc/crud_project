@@ -34,3 +34,13 @@ Then run the server
 Then go to http://localhost:8000 on browser
 
 <img src="screenshot.png" width="500"/>
+
+# Admin
+Django comes with an admin page.
+Create user with
+
+`python manage.py createsuperuser`
+
+Then go to http://localhost:8000/admin on browser
+
+<img src="screenshot2.png" width="500"/>
