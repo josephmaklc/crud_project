@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+
+    <h2>Django Demo - People List</h2>
+
+    <form method="post">
+      {% csrf_token %}
+      First Name: <input name="first_name" type="text" />
+      Last Name: <input name="last_name" type="text" />
+      Age: <input name="age" style="width:80px" type="number" />
+      <input class="btn btn-primary" type="submit" />
+    </form>
+    <p />
+    <table class="table table-bordered">
+      <thead class="table-dark">
+
+        <tr>
+          <th>id</th>
+          <th scope="col">First name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Age</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for person in persons %}
+        <tr>
+          <td>{{person.id}}</td>
+          <td>{{person.first_name}}</td>
+          <td>{{person.last_name}}</td>
+          <td>{{person.age}}</td>
+          <td><a href="/update_person/{{person.id}}">Update</a></td>
+          <td><a href="/delete_person/{{person.id}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
