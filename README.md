@@ -33,4 +33,4 @@ Then run the server
 
 Then go to http://localhost:8000 on browser
 
-<img src="screenshot.png" width="300"/>
+<img src="screenshot.png" width="500"/>
